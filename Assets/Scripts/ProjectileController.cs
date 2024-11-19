@@ -6,6 +6,7 @@ public class ProjectileController : MonoBehaviour
 {
     private Rigidbody projectileRb;
     public float projectileSpeed;
+    public float waitInSeconds;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +17,6 @@ public class ProjectileController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Destroy(gameObject, waitInSeconds);
     }
 }
