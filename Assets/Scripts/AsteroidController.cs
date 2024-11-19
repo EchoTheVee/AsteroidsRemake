@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class AsteroidController : MonoBehaviour
 {
+    private float scale;
+    private int rotate;
     // Start is called before the first frame update
     void Start()
     {
-        
+        scale = Random.Range(0.5f, 2);
+        rotate = Random.Range(5, 360);
+        transform.rotation = Quaternion.Euler(new Vector3(rotate, rotate, rotate));
     }
 
     // Update is called once per frame
