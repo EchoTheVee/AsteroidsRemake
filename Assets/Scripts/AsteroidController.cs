@@ -6,9 +6,11 @@ public class AsteroidController : MonoBehaviour
 {
     private float scale;
     private int rotate;
+    private Rigidbody asteroidRb;
     // Start is called before the first frame update
     void Start()
     {
+        asteroidRb = GetComponent<Rigidbody>();
         scale = Random.Range(0.1f, 0.5f);
         rotate = Random.Range(5, 360);
         transform.rotation = Quaternion.Euler(new Vector3(rotate, rotate, rotate));
