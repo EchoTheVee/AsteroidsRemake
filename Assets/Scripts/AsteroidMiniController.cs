@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AsteroidController : MonoBehaviour
+public class AsteroidMiniController : MonoBehaviour
 {
     private float scale;
     private int rotate;
@@ -10,13 +10,12 @@ public class AsteroidController : MonoBehaviour
     private float xTarg;
     private float zTarg;
     public float moveForce;
-    public GameObject asteroidPrefab;
-    private int numberOfTimes = 2;
+    //public GameObject asteroidPrefab;
     // Start is called before the first frame update
     void Start()
     {
         asteroidRb = GetComponent<Rigidbody>();
-        scale = Random.Range(0.3f, 0.5f);
+        scale = Random.Range(0.1f, 0.27f);
         rotate = Random.Range(5, 360);
         transform.rotation = Quaternion.Euler(new Vector3(rotate, rotate, rotate));
         transform.localScale = new Vector3(scale, scale, scale);
@@ -35,17 +34,17 @@ public class AsteroidController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Bullet"))
         {
-            SpawnPrefab(numberOfTimes);
+            //SpawnPrefab();
             Destroy(other.gameObject);
             Destroy(gameObject);
         }
     }
 
-    public void SpawnPrefab(int numberOfTimes)
+    public void SpawnPrefab()
     {
-        Instantiate(asteroidPrefab, transform.position, asteroidPrefab.transform.rotation);
-        rotate = Random.Range(5, 360);
-        asteroidPrefab.transform.rotation = Quaternion.Euler(new Vector3(rotate, rotate, rotate));
-        asteroidPrefab.transform.localScale = new Vector3(scale/2, scale/2, scale/2);
+        //Instantiate(asteroidPrefab, transform.position, asteroidPrefab.transform.rotation);
+       //rotate = Random.Range(5, 360);
+        //asteroidPrefab.transform.rotation = Quaternion.Euler(new Vector3(rotate, rotate, rotate));
+        //asteroidPrefab.transform.localScale = new Vector3(scale/2, scale/2, scale/2);
     }
 }
