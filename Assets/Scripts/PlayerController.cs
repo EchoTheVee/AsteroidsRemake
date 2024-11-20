@@ -11,9 +11,11 @@ public class PlayerController : MonoBehaviour
     private Rigidbody playerRb;
     public GameObject projectilePrefab;
     public GameObject spawnerPrefab;
+    private GameManager gm;
     // Start is called before the first frame update
     void Start()
     {
+        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
         playerRb = GetComponent<Rigidbody>();
     }
 
@@ -29,6 +31,14 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(projectilePrefab, spawnerPrefab.transform.position, transform.rotation);
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            gm.hp = gm.hp - 1;
         }
     }
 }
