@@ -122,6 +122,28 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &197278710 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6912945733784632621, guid: 7aceaee8fcd4e634faf9776ccdba5991,
+    type: 3}
+  m_PrefabInstance: {fileID: 5993972611870714913}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &197278717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197278710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5081d51db0470846939aebca0d8900f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xMin: -5
+  xMax: 5
+  zMin: -2.5
+  zMax: 2.5
 --- !u!1 &293742021
 GameObject:
   m_ObjectHideFlags: 0
@@ -937,7 +959,7 @@ PrefabInstance:
     - target: {fileID: 6099113217525065623, guid: 7aceaee8fcd4e634faf9776ccdba5991,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.89
+      value: -0.92
       objectReference: {fileID: 0}
     - target: {fileID: 6099113217525065623, guid: 7aceaee8fcd4e634faf9776ccdba5991,
         type: 3}
@@ -947,7 +969,7 @@ PrefabInstance:
     - target: {fileID: 6099113217525065623, guid: 7aceaee8fcd4e634faf9776ccdba5991,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.61
+      value: 8.08
       objectReference: {fileID: 0}
     - target: {fileID: 6099113217525065623, guid: 7aceaee8fcd4e634faf9776ccdba5991,
         type: 3}
@@ -988,6 +1010,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AsteroidEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8839866613259412116, guid: 7aceaee8fcd4e634faf9776ccdba5991,
+        type: 3}
+      propertyPath: moveForce
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7aceaee8fcd4e634faf9776ccdba5991, type: 3}

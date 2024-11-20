@@ -7,6 +7,9 @@ public class AsteroidController : MonoBehaviour
     private float scale;
     private int rotate;
     private Rigidbody asteroidRb;
+    private float xTarg;
+    private float zTarg;
+    public float moveForce;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +18,9 @@ public class AsteroidController : MonoBehaviour
         rotate = Random.Range(5, 360);
         transform.rotation = Quaternion.Euler(new Vector3(rotate, rotate, rotate));
         transform.localScale = new Vector3(scale, scale, scale);
+        xTarg = Random.Range(-10, 10);
+        zTarg = Random.Range(-7, 7);
+        asteroidRb.AddForce(new Vector3(xTarg, 0, zTarg) * moveForce);
     }
 
     // Update is called once per frame
