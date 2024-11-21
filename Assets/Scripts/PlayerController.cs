@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public GameObject projectilePrefab;
     public GameObject spawnerPrefab;
     private GameManager gm;
+    public GameObject thruster;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +32,16 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             Instantiate(projectilePrefab, spawnerPrefab.transform.position, transform.rotation);
+        }
+
+        if (verticalInput >= 0.1f)
+        {
+            thruster.SetActive(true);
+        }
+
+        else
+        {
+            thruster.SetActive(false);
         }
     }
 
