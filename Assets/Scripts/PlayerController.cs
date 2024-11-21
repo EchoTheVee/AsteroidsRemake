@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
         transform.Rotate(Vector3.up * turnSpeed * horizontalInput * Time.deltaTime);
         playerRb.AddRelativeForce(Vector3.forward * moveSpeed * verticalInput);
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetButtonDown("Fire1"))
         {
             Instantiate(projectilePrefab, spawnerPrefab.transform.position, transform.rotation);
         }
