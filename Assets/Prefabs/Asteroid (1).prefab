@@ -103,6 +103,7 @@ MonoBehaviour:
   moveForce: 3
   asteroidPrefab: {fileID: 938706904428261370, guid: 2a43209cac09dcf4cad3dcfee169a3df,
     type: 3}
+  gm: {fileID: 0}
 --- !u!135 &5227361659791022870
 SphereCollider:
   m_ObjectHideFlags: 0

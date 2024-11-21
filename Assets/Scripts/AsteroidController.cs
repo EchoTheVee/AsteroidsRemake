@@ -12,9 +12,11 @@ public class AsteroidController : MonoBehaviour
     public float moveForce;
     public GameObject asteroidPrefab;
     private int numberOfTimes = 2;
+    public GameManager gm;
     // Start is called before the first frame update
     void Start()
     {
+        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
         asteroidRb = GetComponent<Rigidbody>();
         scale = Random.Range(0.3f, 0.5f);
         rotate = Random.Range(5, 360);
@@ -35,6 +37,7 @@ public class AsteroidController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Bullet"))
         {
+            gm.AddScore(50);
             SpawnPrefab(numberOfTimes);
             Destroy(other.gameObject);
             Destroy(gameObject);
