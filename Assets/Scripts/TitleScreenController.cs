@@ -9,7 +9,7 @@ public class TitleScreenController : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            SceneManager.LoadScene("MainLevel");
+            SceneManager.LoadScene("LoadingScreen");
         }
     }
 }
