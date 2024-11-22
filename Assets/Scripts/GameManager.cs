@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI healthDisplay;
     public int hp = 3;
     public GameObject player;
+    public AudioClip onHit;
 
     // Start is called before the first frame update
     void Start()

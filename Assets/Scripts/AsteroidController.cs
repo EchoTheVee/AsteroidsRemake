@@ -10,12 +10,18 @@ public class AsteroidController : MonoBehaviour
     private float xTarg;
     private float zTarg;
     public float moveForce;
+    //[Header("stuff")]
     public GameObject asteroidPrefab;
     private int numberOfTimes = 2;
     public GameManager gm;
+    private AudioSource audioSource;
+    //public AudioClip onHit;
+    private AudioClip onHit;
     // Start is called before the first frame update
     void Start()
     {
+        
+        audioSource = GameObject.Find("GameManager").GetComponent<AudioSource>();
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
         asteroidRb = GetComponent<Rigidbody>();
         scale = Random.Range(0.3f, 0.5f);
@@ -38,6 +44,7 @@ public class AsteroidController : MonoBehaviour
         if (other.gameObject.CompareTag("Bullet"))
         {
             gm.AddScore(50);
+            audioSource.PlayOneShot(gm.onHit, 1.0f);
             SpawnPrefab(numberOfTimes);
             Destroy(other.gameObject);
             Destroy(gameObject);
