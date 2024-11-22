@@ -23,11 +23,17 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (verticalInput < 0)
+        {
+            verticalInput = 0;
+        }
+
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
 
         transform.Rotate(Vector3.up * turnSpeed * horizontalInput * Time.deltaTime);
         playerRb.AddRelativeForce(Vector3.forward * moveSpeed * verticalInput);
+        
 
         if (Input.GetButtonDown("Fire1"))
         {
@@ -43,6 +49,7 @@ public class PlayerController : MonoBehaviour
         {
             thruster.SetActive(false);
         }
+
     }
 
     private void OnCollisionEnter(Collision collision)
