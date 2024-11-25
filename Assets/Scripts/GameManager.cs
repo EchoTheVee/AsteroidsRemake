@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public GameObject player;
     public AudioClip onHit;
     private int highScore;
+    public Camera main;
 
     // Start is called before the first frame update
     void Start()

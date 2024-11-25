@@ -390,7 +390,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -166.62762, w: 0}
+  m_margin: {x: 0, y: 0, z: -678.391, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -895,6 +895,7 @@ MonoBehaviour:
   hp: 3
   player: {fileID: 1933315908}
   onHit: {fileID: 8300000, guid: 6e59c9e1bde864146b37dbba8ff4c6b6, type: 3}
+  main: {fileID: 330585545}
 --- !u!4 &690044058
 Transform:
   m_ObjectHideFlags: 0
@@ -1588,6 +1589,7 @@ MonoBehaviour:
     type: 3}
   spawnerPrefab: {fileID: 293742021}
   thruster: {fileID: 245657470}
+  main: {fileID: 330585545}
 --- !u!65 &1933315911
 BoxCollider:
   m_ObjectHideFlags: 0

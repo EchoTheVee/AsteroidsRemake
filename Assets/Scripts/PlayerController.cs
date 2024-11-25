@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public GameObject spawnerPrefab;
     private GameManager gm;
     public GameObject thruster;
+    public Camera main;
     // Start is called before the first frame update
     void Start()
     {
@@ -56,7 +57,16 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
+            main.fieldOfView = 55;
+            StartCoroutine(fovChangeOnHit());
             gm.hp = gm.hp - 1;
+            //main.fieldOfView = 60;
         }
+    }
+
+    IEnumerator fovChangeOnHit()
+    {
+        yield return new WaitForSeconds(0.2f);
+        main.fieldOfView = 60;
     }
 }
