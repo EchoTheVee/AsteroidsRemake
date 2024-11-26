@@ -7,21 +7,27 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("Score")]
     public int score;
     public TextMeshProUGUI scoreDisplay;
     public TextMeshProUGUI healthDisplay;
     public TextMeshProUGUI highScoreDisplay;
-    public int hp = 3;
-    public GameObject player;
-    public AudioClip onHit;
     private int highScore;
-    public Camera main;
-    public Slider colorSlider;
-    public MeshRenderer mr;
+
+    [Header("Player")]
+    public GameObject player;
+    public int hp = 3;
+    public AudioClip onHit;
+
+    [Header("Colors")]
     public Material[] colors;
     public int colorValue;
+    public MeshRenderer mr;
+    public Slider colorSlider;
 
-    // Start is called before the first frame update
+    [Header("Extras")]
+    public Camera main;
+
     void Start()
     {
         colorSlider.value = PlayerPrefs.GetInt("colorValue");
@@ -32,7 +38,6 @@ public class GameManager : MonoBehaviour
         UpdateScore();
     }
 
-    // Update is called once per frame
     void Update()
     {
         highScore = PlayerPrefs.GetInt("highScore");
@@ -44,18 +49,6 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene("GameOverScreen");
         }
         mr.material = colors[Mathf.RoundToInt(colorSlider.value)];
-        /*
-        if (colorSlider.value == 1)
-        {
-            mr.material = purple;
-        }
-
-        if (colorSlider.value == 2)
-        {
-            mr.material = yellow;
-        }
-*/
-
     }
 
     public void UpdateScore()
