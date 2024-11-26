@@ -155,12 +155,9 @@ MonoBehaviour:
   scoreDisplay: {fileID: 1214559451}
   healthDisplay: {fileID: 1214559451}
   highScoreDisplay: {fileID: 1214559451}
-  hp: 3
   player: {fileID: 919132148629879784}
+  hp: 3
   onHit: {fileID: 8300000, guid: 6e59c9e1bde864146b37dbba8ff4c6b6, type: 3}
-  main: {fileID: 1873225122}
-  colorSlider: {fileID: 1622810867}
-  mr: {fileID: 0}
   colors:
   - {fileID: 2100000, guid: 000913cee5e51b14590b35f47a7276bd, type: 2}
   - {fileID: 2100000, guid: dd47ad1dd41499a4dbed558b33c33862, type: 2}
@@ -168,6 +165,9 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 64bae1dfe28050f4caad91bc1f9d1fb1, type: 2}
   - {fileID: 2100000, guid: 2c96b528c67d5334eaf725f93dc45935, type: 2}
   colorValue: 0
+  mr: {fileID: 0}
+  colorSlider: {fileID: 1622810867}
+  main: {fileID: 1873225122}
 --- !u!4 &9721306
 Transform:
   m_ObjectHideFlags: 0
