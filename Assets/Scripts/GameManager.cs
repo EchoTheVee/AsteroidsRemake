@@ -40,6 +40,12 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+
+        if (Input.GetButtonDown("Exit"))
+        {
+            Application.Quit();
+        }
+
         highScore = PlayerPrefs.GetInt("highScore");
 
         healthDisplay.text = $"Health: {hp}";

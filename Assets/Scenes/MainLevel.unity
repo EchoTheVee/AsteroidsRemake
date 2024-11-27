@@ -1053,12 +1053,9 @@ MonoBehaviour:
   scoreDisplay: {fileID: 263590715}
   healthDisplay: {fileID: 533355530}
   highScoreDisplay: {fileID: 277275127}
-  hp: 3
   player: {fileID: 1933315908}
+  hp: 3
   onHit: {fileID: 8300000, guid: 6e59c9e1bde864146b37dbba8ff4c6b6, type: 3}
-  main: {fileID: 330585545}
-  colorSlider: {fileID: 306026784}
-  mr: {fileID: 4539702729211340856}
   colors:
   - {fileID: 2100000, guid: 000913cee5e51b14590b35f47a7276bd, type: 2}
   - {fileID: 2100000, guid: dd47ad1dd41499a4dbed558b33c33862, type: 2}
@@ -1066,6 +1063,9 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 64bae1dfe28050f4caad91bc1f9d1fb1, type: 2}
   - {fileID: 2100000, guid: 2c96b528c67d5334eaf725f93dc45935, type: 2}
   colorValue: 0
+  mr: {fileID: 4539702729211340856}
+  colorSlider: {fileID: 306026784}
+  main: {fileID: 330585545}
 --- !u!4 &690044058
 Transform:
   m_ObjectHideFlags: 0
@@ -1717,7 +1717,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turnSpeed: 180
-  moveSpeed: 5
+  moveSpeed: 20
   projectilePrefab: {fileID: 2014194710450263103, guid: e572de20b89edbf4499ff68e0047dbad,
     type: 3}
   spawnerPrefab: {fileID: 293742021}

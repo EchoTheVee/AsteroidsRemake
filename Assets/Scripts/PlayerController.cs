@@ -22,8 +22,10 @@ public class PlayerController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+        
+
         if (verticalInput < 0)
         {
             verticalInput = 0;
@@ -36,10 +38,7 @@ public class PlayerController : MonoBehaviour
         playerRb.AddRelativeForce(Vector3.forward * moveSpeed * verticalInput);
         
 
-        if (Input.GetButtonDown("Fire1"))
-        {
-            Instantiate(projectilePrefab, spawnerPrefab.transform.position, transform.rotation);
-        }
+        
 
         if (verticalInput >= 0.1f)
         {
@@ -51,6 +50,16 @@ public class PlayerController : MonoBehaviour
             thruster.SetActive(false);
         }
 
+    }
+
+    private void Update()
+    {
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Instantiate(projectilePrefab, spawnerPrefab.transform.position, transform.rotation);
+        }
+
+        
     }
 
     private void OnCollisionEnter(Collision collision)

@@ -14,9 +14,9 @@ public class LoadingScreenController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        loadBar.value += 0.1f;
+        loadBar.value += 1f;
 
         if (loadBar.value >= 100)
         {
